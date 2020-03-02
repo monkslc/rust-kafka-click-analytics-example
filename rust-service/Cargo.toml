@@ -1,0 +1,18 @@
+[package]
+name = "rust-service"
+version = "0.1.0"
+authors = ["Connor Monks <monkslc@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4"
+futures = "0.3.1"
+rand = "0.7"
+rdkafka = { version = "0.23", features = ["cmake-build"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_cbor = "0.11.1"
+sled = "0.31.0"
+tokio = { version = "0.2.11", features = ["full"] }
+uuid = { version = "0.8.1", features = ["v4", "serde"] }
