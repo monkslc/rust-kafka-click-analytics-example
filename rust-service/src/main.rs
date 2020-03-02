@@ -1,11 +1,9 @@
 use chrono::Local;
 use futures::stream::StreamExt;
-use producers::Producer;
 use rdkafka::{
     consumer::{CommitMode, Consumer},
     message::Message,
 };
-use samplers::{ClickSampler, ImpressionSampler};
 use std::time::Duration;
 use tokio::time;
 use tokio;
@@ -13,6 +11,8 @@ use uuid::Uuid;
 
 use consumers::EventConsumer;
 use events::{Click, Impression};
+use producers::Producer;
+use samplers::{ClickSampler, ImpressionSampler};
 
 mod consumers;
 mod events;
